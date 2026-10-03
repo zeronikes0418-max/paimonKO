@@ -10,7 +10,7 @@ const { OpenAI } = require('openai');
 const PORT = process.env.PORT || 3000;
 http.createServer((req, res) => {
     res.writeHead(200, { 'Content-Type': 'text/plain; charset=utf-8' });
-    res.end('푸리나 봇 살아있음!');
+    res.end('페이몬 봇 살아있음!');
 }).listen(PORT, () => console.log(`🌐 헬스체크 서버 ${PORT}번 포트에서 대기 중`));
 
 const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY;
@@ -629,7 +629,7 @@ async function handleGame(message) {
     }
 }
 
-client.once('ready', () => {
+client.once('clientReady', () => {
     console.log('\n==================================================');
     console.log(`페이몬 봇 구동 성공: ${client.user.tag}`);
     console.log('==================================================\n');
